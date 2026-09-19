@@ -1,19 +1,36 @@
-html, body {
-  height: 100vh;
-  margin: 0;
+html,
+body {
+    height: 100vh;
+    margin: 0;
 }
 
 #mv-container {
+    position: relative;
     height: 90%;
     justify-content: center;
     align-items: center;
 }
 
 #aframe-container {
+    position: relative;
     height: 90%;
 }
 
-model-viewer {
+model-viewer a-scene {
     height: 100%;
     width: 100%;
+}
+
+#aframe-container video,
+#aframe-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.mindar-ui-overlay {
+    pointer-events: none;
 }
