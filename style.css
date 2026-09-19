@@ -21,13 +21,3 @@ model-viewer, a-scene {
     height: 100%;
     width: 100%;
 }
-/* 
-#aframe-container video,
-#aframe-container canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-} */
