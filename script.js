@@ -1,7 +1,7 @@
 let switchButton = document.getElementById("switch-ar-button");
 let mvContainer = document.getElementById("mv-container");
 let aFrameContainer = document.getElementById("aframe-container");
-let aFrameUis = document.getElementsByClassName("test");
+let aFrameUis = Array.from(document.getElementsByClassName("test"));
 
 mvContainer.style.display = "flex";
 aFrameContainer.style.display = "none";
