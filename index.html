@@ -26,7 +26,7 @@
         </model-viewer>
     </div>
     <div id="aframe-container">
-        <a-scene mindar-image="imageTargetSrc: ./targets.mind; uiError:no; uiLoading:no uiScanning=#scanning-overlay;"
+        <a-scene mindar-image="imageTargetSrc: ./targets.mind; uiError:no; uiLoading:no uiScanning:no;"
             embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
             vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
             <a-assets>
@@ -37,14 +37,14 @@
                 <a-gltf-model rotation="0 0 0" position="0 0 0.1" src="#monke"></a-gltf-model>
             </a-entity>
         </a-scene>
-        <div id="scanning-overlay" class="mindar-ui-overlay mindar-ui-scanning">
+        <!-- <div id="scanning-overlay" class="mindar-ui-overlay mindar-ui-scanning">
             <div class="scanning">
                 <div class="inner">
                     <div class="scanline">
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <script src="script.js"></script>
 </body>
