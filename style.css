@@ -4,14 +4,12 @@ html, body {
 }
 
 #mv-container {
-    display: none;
     height: 90%;
     justify-content: center;
     align-items: center;
 }
 
 #aframe-container {
-    display: flex;
     height: 90%;
 }
 
