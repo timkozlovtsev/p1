@@ -17,7 +17,7 @@ body {
     height: 90%;
 }
 
-model-viewer a-scene {
+model-viewer, a-scene {
     height: 100%;
     width: 100%;
 }
