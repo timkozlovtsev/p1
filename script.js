@@ -5,23 +5,14 @@ let aFrameUis = Array.from(document.getElementsByClassName("mindar-ui-overlay"))
 
 mvContainer.style.display = "flex";
 aFrameContainer.style.display = "none";
-aFrameUis.forEach(element => {
-    element.style.display = "none";
-});
 
 switchButton.addEventListener("click", () => {
     if (mvContainer.style.display !== "none") {
         mvContainer.style.display = "none";
         aFrameContainer.style.display = "flex";
-        aFrameUis.forEach(element => {
-            element.style.display = "block";
-        });
     }
     else {
         mvContainer.style.display = "flex";
         aFrameContainer.style.display = "none";
-        aFrameUis.forEach(element => {
-            element.style.display = "none";
-        });
     }
 });
