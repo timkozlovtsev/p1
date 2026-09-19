@@ -4,49 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>model-viewer</title>
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image.prod.js"></script>
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
 </head>
 
 <body>
-    <button id="switch-ar-button">
-        Поменять режим
-    </button>
-    <div id="mv-container">
-        <model-viewer src="monke.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
-            poster="poster.webp" shadow-intensity="1">
-            <div class="progress-bar hide" slot="progress-bar">
-                <div class="update-bar"></div>
-            </div>
-        </model-viewer>
-    </div>
-    <div id="aframe-container">
-        <a-scene mindar-image="imageTargetSrc: ./targets.mind; uiError:no; uiLoading:no; uiScanning:no;"
-            embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
-            vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-            <a-assets>
-                <a-asset-item id="monke" src="monke.glb"></a-asset-item>
-            </a-assets>
-            <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-            <a-entity mindar-image-target="targetIndex: 0">
-                <a-gltf-model rotation="0 0 0" position="0 0 0.1" src="#monke"></a-gltf-model>
-            </a-entity>
-        </a-scene>
-        <div id="scanning-overlay" class="mindar-ui-overlay mindar-ui-scanning">
-            <div class="scanning">
-                <div class="inner">
-                    <div class="scanline">
-                    </div>
-                </div>
-            </div>
+    <model-viewer src="monke.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+        poster="poster.webp" shadow-intensity="1">
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </model-viewer>
 </body>
 
 </html>
